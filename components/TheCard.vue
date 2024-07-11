@@ -1,4 +1,5 @@
 <template>
+   
   <div class="h-[700px] md:w-[600px] w-[100%] mt-4  rounded-md border-black border-[1px]
   text-center flex flex-col justify-between
   ">
@@ -32,6 +33,7 @@
 
 <div class="bottom bg-[#9ce6ff] h-[50%]">
 <div class="flex items-between pt-10 justify-between px-10">
+
 <TheCountry
 flag="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg"
 country="RUB"
@@ -47,6 +49,7 @@ flag="https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg
 country="KTN"
 @click="switchCurrencyKz"
 />
+
 </div>
 <div class="py-14 flex justify-center gap-6">
 <UButton color="blue" @click="switchMouth">Месяц</UButton>

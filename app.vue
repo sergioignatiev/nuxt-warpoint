@@ -1,4 +1,6 @@
 <template>
+  <div class="p-2">
+  <UButton class="my-3 text-[40px] uppercase" color="white" block>Тарифы</UButton>
   <div class="flex flex-wrap gap-2 items-between justify-center p-2">
     <TheCard
     
@@ -22,6 +24,7 @@
     :main-number-year="1400"
     advanced="true"
     />
+  </div>
   </div>
 </template>
 <script setup>
