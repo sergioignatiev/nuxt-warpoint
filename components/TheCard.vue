@@ -20,14 +20,14 @@
   
 <p>Год</p>
 <div v-show="advanced==false">
-<p class="text-red-500" v-show="tenge">Скидка {{ Math.floor( kzt/rub*mainNumber*2) }} KZT</p>
-<p class="text-red-500" v-show="yuan">Скидка {{ Math.floor( cny/rub*mainNumber*2) }} CNY</p>
-<p class="text-red-500" v-show="ruble">Скидка {{ Math.floor(rub/rub*mainNumber*2) }} RUB</p>
+<p class="text-red-500 font-semibold" v-show="tenge"> * Выгодно: скидка {{ Math.floor( kzt/rub*mainNumber*2) }} KZT</p>
+<p class="text-red-500 font-semibold" v-show="yuan">  * Выгодно: скидка {{ Math.floor( cny/rub*mainNumber*2) }} CNY</p>
+<p class="text-red-500 font-semibold" v-show="ruble"> * Выгодно: скидка {{ Math.floor(rub/rub*mainNumber*2) }} RUB</p>
 </div>
 <div class="" v-show="advanced">
-  <p class="text-red-500" v-show="tenge">Скидка : {{ Math.floor( kzt/rub*mainNumber*2)+Math.floor(kzt/rub*100) }} KZT</p>
-  <p class="text-red-500" v-show="yuan">Скидка : {{ Math.floor( cny/rub*mainNumber*2)+Math.floor(cny/rub*100) }} CNY</p>
-  <p class="text-red-500" v-show="ruble">Скидка : {{ Math.floor(rub/rub*mainNumber*2)+100 }} RUB</p>
+  <p class="text-red-500 font-semibold" v-show="tenge">* Выгодно: скидка {{ Math.floor( kzt/rub*mainNumber*2)+Math.floor(kzt/rub*100) }} KZT</p>
+  <p class="text-red-500 font-semibold" v-show="yuan"> * Выгодно: скидка {{ Math.floor( cny/rub*mainNumber*2)+Math.floor(cny/rub*100) }} CNY</p>
+  <p class="text-red-500 font-semibold" v-show="ruble">* Выгодно: скидка {{ Math.floor(rub/rub*mainNumber*2)+100 }} RUB</p>
 </div> 
 </div>
 
