@@ -28,6 +28,9 @@
   </div>
 </template>
 <script setup>
+useSeoMeta({
+  title:"Тестовое Сергей Игнатьев"
+})
 
 const {data}=await useFetch('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json')
 
