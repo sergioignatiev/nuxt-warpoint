@@ -9,12 +9,18 @@
     label="Стандартный"
     period="месяц"
     :main-number-year="1000"
+    advanced="true"
     />
     <TheCard
     
     :rub="data.eur.rub"
     :kzt="data.eur.kzt"
+    :cny="data.eur.cny"
     main-number="150"
+    label="Продвинутый"
+    period="месяц"
+    :main-number-year="1400"
+    advanced="false"
     />
   </div>
 </template>

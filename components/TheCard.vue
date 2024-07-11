@@ -18,9 +18,16 @@
   <h1 class="text-[80px] font-bold" v-show="yuan">{{Math.floor( cny/rub*mainNumberYear) }} CNY</h1>
   
 <p>Год</p>
+<div v-show="!advanced">
 <p class="text-red-500" v-show="tenge">Скидка {{ Math.floor( kzt/rub*mainNumber*2) }} KZT</p>
 <p class="text-red-500" v-show="yuan">Скидка {{ Math.floor( cny/rub*mainNumber*2) }} CNY</p>
 <p class="text-red-500" v-show="ruble">Скидка {{ Math.floor(rub/rub*mainNumber*2) }} RUB</p>
+</div>
+<div class="" v-show="advanced">
+  <p class="text-red-500" v-show="tenge">Скидка {{ Math.floor( kzt/rub*mainNumber*2)+Math.floor(kzt/rub*100) }} KZT</p>
+  <p class="text-red-500" v-show="yuan">Скидка {{ Math.floor( cny/rub*mainNumber*2)+Math.floor(cny/rub*100) }} CNY</p>
+  <p class="text-red-500" v-show="ruble">Скидка {{ Math.floor(rub/rub*mainNumber*2)+100 }} RUB</p>
+</div> 
 </div>
 
 <div class="bottom bg-[#9ce6ff] h-[50%]">
@@ -42,8 +49,8 @@ country="KTN"
 />
 </div>
 <div class="py-14 flex justify-center gap-6">
-<UButton @click="switchMouth">Месяц</UButton>
-<UButton @click="switchYear">Год</UButton>
+<UButton color="blue" @click="switchMouth">Месяц</UButton>
+<UButton color="blue" variant="outline" size="lg" @click="switchYear">Год</UButton>
 </div>
 </div>
 
@@ -58,6 +65,7 @@ defineProps({rub:Number,
     mainNumber:Number,
     mainNumberYear:Number,
     label:String,
+    advanced:Boolean
     
 })
 const ruble=ref(true)
