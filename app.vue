@@ -9,7 +9,7 @@
     label="Стандартный"
     period="месяц"
     :main-number-year="1000"
-    advanced="true"
+ 
     />
     <TheCard
     
@@ -20,7 +20,7 @@
     label="Продвинутый"
     period="месяц"
     :main-number-year="1400"
-    advanced="false"
+    advanced="true"
     />
   </div>
 </template>

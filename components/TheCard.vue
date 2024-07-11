@@ -1,9 +1,9 @@
 <template>
-  <div class="h-[700px] w-[600px] rounded-md border-black border-[1px]
+  <div class="h-[700px] md:w-[600px] w-[100%] mt-4  rounded-md border-black border-[1px]
   text-center flex flex-col justify-between
   ">
 
-  <div class="top mouth px-9 py-9" v-show="mouth">
+  <div class="top mouth md:px-9 py-9" v-show="mouth">
   <h2 class="text-[#00A3FF] text-center text-[48px] font-semibold">{{ label }}</h2>
   <h1 class="text-[80px] font-bold" v-show="ruble">{{ rub/rub*mainNumber }} RUB</h1>
   <h1 class="text-[80px] font-bold" v-show="tenge">{{Math.floor( kzt/rub*mainNumber) }} CZT</h1>
@@ -11,22 +11,22 @@
 <p>Месяц</p>
 </div>
 
-<div class="top mouth px-9 py-9" v-show="year">
+<div class="top mouth md:px-9 py-9" v-show="year">
   <h2 class="text-[#00A3FF] text-center text-[48px] font-semibold">{{ label }}</h2>
   <h1 class="text-[80px] font-bold" v-show="ruble">{{ rub/rub*mainNumberYear }} RUB</h1>
   <h1 class="text-[80px] font-bold" v-show="tenge">{{Math.floor( kzt/rub*mainNumberYear) }} CZT</h1>
   <h1 class="text-[80px] font-bold" v-show="yuan">{{Math.floor( cny/rub*mainNumberYear) }} CNY</h1>
   
 <p>Год</p>
-<div v-show="!advanced">
+<div v-show="advanced==false">
 <p class="text-red-500" v-show="tenge">Скидка {{ Math.floor( kzt/rub*mainNumber*2) }} KZT</p>
 <p class="text-red-500" v-show="yuan">Скидка {{ Math.floor( cny/rub*mainNumber*2) }} CNY</p>
 <p class="text-red-500" v-show="ruble">Скидка {{ Math.floor(rub/rub*mainNumber*2) }} RUB</p>
 </div>
 <div class="" v-show="advanced">
-  <p class="text-red-500" v-show="tenge">Скидка {{ Math.floor( kzt/rub*mainNumber*2)+Math.floor(kzt/rub*100) }} KZT</p>
-  <p class="text-red-500" v-show="yuan">Скидка {{ Math.floor( cny/rub*mainNumber*2)+Math.floor(cny/rub*100) }} CNY</p>
-  <p class="text-red-500" v-show="ruble">Скидка {{ Math.floor(rub/rub*mainNumber*2)+100 }} RUB</p>
+  <p class="text-red-500" v-show="tenge">Скидка : {{ Math.floor( kzt/rub*mainNumber*2)+Math.floor(kzt/rub*100) }} KZT</p>
+  <p class="text-red-500" v-show="yuan">Скидка : {{ Math.floor( cny/rub*mainNumber*2)+Math.floor(cny/rub*100) }} CNY</p>
+  <p class="text-red-500" v-show="ruble">Скидка : {{ Math.floor(rub/rub*mainNumber*2)+100 }} RUB</p>
 </div> 
 </div>
 
