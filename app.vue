@@ -22,7 +22,7 @@
     label="Продвинутый"
     period="месяц"
     :main-number-year="1400"
-    advanced="true"
+    advanced=true
     />
   </div>
   </div>
