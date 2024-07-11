@@ -1,75 +1,13 @@
-# Nuxt 3 Minimal Starter
+Приветствую Алена.
+В общем проект готов, хотя возможно буду еще вносить небольшие правки.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Ссылка на проект https://nuxt-warpoint.vercel.app/ выложенный на Vercel.
 
-## Setup
+Код в репозитории на GitHub https://github.com/sergioignatiev/nuxt-warpoint
 
-Make sure to install the dependencies:
+Как api использовал https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json не знаю насколько точно он показывает текущие курсы, но при необходимости могу сделать на основе другого.
 
-```bash
-# npm
-npm install
+Валюта переключается при нажатии на флажки стран, базово выбран рубль. Месяц/год соответственно кнопками месяц/год.
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Для создания использовал Vue фрэймворк Nuxt в основном потому что он по моему личному опыту делает разработку максимально быстрой.
+Для стилизации использовал Tailwind и библиотеку Nuxt Ui. 
