@@ -1,6 +1,8 @@
 <template>
    
-  <div class="h-[700px] md:w-[600px] w-[100%] mt-4  rounded-md border-black border-[1px]
+  <div class="
+  h-[700px] md:w-[600px] w-[100%]
+   mt-4  rounded-md border-black border-[1px]
   text-center flex flex-col justify-between
   ">
 
@@ -74,6 +76,7 @@ defineProps({rub:Number,
 const ruble=ref(true)
 const tenge=ref(false)
 const yuan=ref(false)
+
 function switchCurrencyKz(){
     tenge.value=true
     ruble.value=false
@@ -90,7 +93,8 @@ function switchCurrencyRu(){
     yuan.value=false 
 }
 
-const period=ref('Месяц')
+
+
 const mouth=ref(true)
 const year=ref(false)
 
