@@ -6,56 +6,62 @@
   text-center flex flex-col justify-between
   ">
 
-  <div class="top mouth md:px-9 py-9" v-show="mouth">
-  <h2 class="text-[#00A3FF] text-center text-[48px] font-semibold">{{ label }}</h2>
-  <h1 class="text-[80px] font-bold" v-show="ruble">{{ rub/rub*mainNumber }} RUB</h1>
-  <h1 class="text-[80px] font-bold" v-show="tenge">{{Math.floor( kzt/rub*mainNumber) }} CZT</h1>
-  <h1 class="text-[80px] font-bold" v-show="yuan">{{Math.floor( cny/rub*mainNumber) }} CNY</h1>
-<p>Месяц</p>
-</div>
-
-<div class="top mouth md:px-9 py-9" v-show="year">
-  <h2 class="text-[#00A3FF] text-center text-[48px] font-semibold">{{ label }}</h2>
-  <h1 class="text-[80px] font-bold" v-show="ruble">{{ rub/rub*mainNumberYear }} RUB</h1>
-  <h1 class="text-[80px] font-bold" v-show="tenge">{{Math.floor( kzt/rub*mainNumberYear) }} CZT</h1>
-  <h1 class="text-[80px] font-bold" v-show="yuan">{{Math.floor( cny/rub*mainNumberYear) }} CNY</h1>
+  <TheMouth
+  :kzt="kzt"
+    :cny="cny"
+    :rub="rub"
+    :mainNumber="mainNumber"
+    :mainNumberYear="mainNumberYear"
+    :label="label"
+    :advanced="advanced"
+    :tenge='tenge'
+    :yuan="yuan"
+    :ruble="ruble"
+    :mouth="mouth"
   
-<p>Год</p>
-<div v-show="advanced==false">
-<p class="text-red-500 font-semibold" v-show="tenge"> * Выгодно: скидка {{ Math.floor( kzt/rub*mainNumber*2) }} KZT</p>
-<p class="text-red-500 font-semibold" v-show="yuan">  * Выгодно: скидка {{ Math.floor( cny/rub*mainNumber*2) }} CNY</p>
-<p class="text-red-500 font-semibold" v-show="ruble"> * Выгодно: скидка {{ Math.floor(rub/rub*mainNumber*2) }} RUB</p>
-</div>
-<div class="" v-show="advanced">
-  <p class="text-red-500 font-semibold" v-show="tenge">* Выгодно: скидка {{ Math.floor( kzt/rub*mainNumber*2)+Math.floor(kzt/rub*100) }} KZT</p>
-  <p class="text-red-500 font-semibold" v-show="yuan"> * Выгодно: скидка {{ Math.floor( cny/rub*mainNumber*2)+Math.floor(cny/rub*100) }} CNY</p>
-  <p class="text-red-500 font-semibold" v-show="ruble">* Выгодно: скидка {{ Math.floor(rub/rub*mainNumber*2)+100 }} RUB</p>
-</div> 
-</div>
+  />
 
+<TheYear
+    :kzt="kzt"
+    :cny="cny"
+    :rub="rub"
+    :mainNumber="mainNumber"
+    :mainNumberYear="mainNumberYear"
+    :label="label"
+    :advanced="advanced"
+    :tenge='tenge'
+    :yuan="yuan"
+    :ruble="ruble"
+    :year="year"
+
+/>
 <div class="bottom bg-[#9ce6ff] h-[50%]">
 <div class="flex items-between pt-10 justify-between px-10">
-
+  
 <TheCountry
 flag="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg"
 country="RUB"
 @click="switchCurrencyRu"
+:currency="ruble"
 />
 <TheCountry
 flag="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg"
 country="CNY"
+
 @click="switchCurrencyCh"
+:currency="yuan"
 />
 <TheCountry
 flag="https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg"
 country="KTN"
 @click="switchCurrencyKz"
+:currency="tenge"
 />
 
 </div>
 <div class="py-14 flex justify-center gap-6">
-<UButton color="blue" @click="switchMouth">Месяц</UButton>
-<UButton color="blue" variant="outline" size="lg" @click="switchYear">Год</UButton>
+<UButton variant="solid" color="blue" text="white"  :class="{activeButton:mouth}"   @click="switchMouth">Месяц</UButton>
+<UButton variant="solid" color="blue" text="white"  :class="{activeButton:year}"  size="lg" @click="switchYear">Год</UButton>
 </div>
 </div>
 
@@ -108,6 +114,11 @@ function switchYear(){
 }
 </script>
 
-<style>
+<style >
+
+.activeButton{
+  background-color: blue;
+  transform:scale(110%);
+}
 
 </style>
