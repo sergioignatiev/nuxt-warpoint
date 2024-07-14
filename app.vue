@@ -7,10 +7,10 @@
     :rub="data.eur.rub"
     :kzt="data.eur.kzt"
     :cny="data.eur.cny"
-    main-number="100"
+    main-number=100
     label="Стандартный"
     period="месяц"
-    :main-number-year="1000"
+    main-number-year=1000
  
     />
     <TheCard
@@ -21,7 +21,7 @@
     main-number=150
     label="Продвинутый"
     period="месяц"
-    :main-number-year="1400"
+    main-number-year=1400
     advanced=true
     />
   </div>
