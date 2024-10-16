@@ -1,43 +1,21 @@
 <template>
-  <div class="p-2">
-  <UButton class="my-3 text-[40px] uppercase" color="white" block>Тарифы</UButton>
-  <div class="flex flex-wrap gap-2 items-between justify-center p-2">
-    <TheCard
-    
-    :rub="data.eur.rub"
-    :kzt="data.eur.kzt"
-    :cny="data.eur.cny"
-    main-number=100
-    label="Стандартный"
-    period="месяц"
-    main-number-year=1000
- 
-    />
-    <TheCard
-    
-    :rub="data.eur.rub"
-    :kzt="data.eur.kzt"
-    :cny="data.eur.cny"
-    main-number=150
-    label="Продвинутый"
-    period="месяц"
-    main-number-year=1400
-    advanced=true
-    />
-  </div>
+  <div class="px-5">
+ <div v-for="b in data" :key="b.id">
+<h1 class="text-[30px] font-extrabold"><a target="blanc" :href="`https://www.klerk.ru${b.url}`">{{ b.title }}</a></h1>
+
+<section v-for="child in b.children">
+<h1 class="text-[20px] font-bold"><a target="blanc" :href="`https://www.klerk.ru${child.url}`">{{ child.title }}</a></h1>
+<p>{{ child.count }}</p>
+
+</section>
+ </div>
   </div>
 </template>
-<script setup>
-useSeoMeta({
-  title:"Тестовое Сергей Игнатьев"
-})
 
-const {data}=await useFetch('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json')
-
+<script  setup>
+const {data}= await useFetch('https://www.klerk.ru/yindex.php/v3/event/rubrics')
 </script>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-*{
-  font-family: Inter,  sans-serif;
-}
+
 </style>
