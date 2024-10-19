@@ -1,11 +1,17 @@
 <template>
-  <div>
-    <div class="flex items-center justify-center pt-[48px] pb-[28px]">
+  <div >
+
+    <div class="flex items-center justify-center pt-[48px] pb-[28px] ">
  <img class="w-[76px]" src="/public/klerk.png" alt="clerk">
  </div>
+
  <div class="flex justify-center text-[#999999] text-[13px] font-normal">Хлебные крошки &#8594 Хлебные Крошки &#8594 Хлебные крошки </div>
-  <h1 class="bg-red-100 text-center text-[56px] font-medium">Подписки «Клерка»</h1>
-  
+  <h1 class=" text-center text-[56px] font-medium">Подписки «Клерка»</h1>
+ 
+  <TheNavbar/>
+  <div class="flex justify-center">
+  <NuxtPage/>
+  </div>
   </div>
 </template>
 
