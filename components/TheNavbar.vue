@@ -1,6 +1,6 @@
 <template>
 <nav class="flex items-center justify-center h-[64px] gap-[24px] ">
-<NuxtLink class=" items-center justify-center flex h-[100%]" v-for="nav in navigation" :to="nav.link" :key="nav.id">{{nav.label}}</NuxtLink>
+<NuxtLink class=" items-center justify-center flex h-[100%] text-[16px] text-[#666666]" v-for="nav in navigation" :to="nav.link" :key="nav.id">{{nav.label}}</NuxtLink>
 
 </nav>
 </template>
