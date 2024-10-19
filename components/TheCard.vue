@@ -16,8 +16,8 @@
 </div>   
 
 <div class=" flex items-center gap-[8px]">
-<div :class="{back:sw}" class="relative h-[24px] w-[48px] bg-[#eeeeee] rounded-full border-[1px] border-[#60e080]">
-    <div @click="sw=!sw" :class="{toRight:sw}" class="absolute h-[22px] w-[22px] bg-white rounded-full"></div>
+<div :class="{back:sw}" class="relative h-[24px] w-[48px] bg-[#eeeeee] rounded-full border-[2px] border-[#60e080]">
+    <div @click="sw=!sw" :class="{toRight:sw}" class="absolute h-[21px] w-[21px] bg-white rounded-full"></div>
 </div>
 <p class="text-[14px]">Уже получает {{ receivers }} человек</p>
 </div>

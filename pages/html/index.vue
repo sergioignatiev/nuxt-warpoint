@@ -56,7 +56,7 @@ checktwo='Подборка статей за день'
 receivers="59 342"
   />
   <TheCard
-  :strong=false
+  :strong=true
   image="free.png"
   :frame=false
 rotate="-rotate-[15deg]"
