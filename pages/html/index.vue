@@ -1,5 +1,6 @@
 <template>
  <section class="w-[1024px] bg-[#f5f5f8]  py-[48px] ">
+
   <div class="px-[48px]">
 <h2 class="text-[24px] font-medium">Выберите рассылки, которые подходят именно вам</h2>
 
@@ -17,8 +18,56 @@
 </div>
 </div>
 
-<div class="mt-[32px] px-[24px]">
-  <TheCard/>
+<div class="mt-[32px] px-[24px] flex flex-wrap justify-between gap-[24px]">
+  <TheCard
+  :strong=false
+  image="s1.png"
+  :frame=true
+rotate="-rotate-[15deg]"
+header="Перед рассветом"
+title="Утренний бухгалтер"
+description="Самые важные новости и события за день. Кратко, по делу, структурировано."
+checkone="Новости для бухгалтеров, ИП и директора"
+checktwo='Подборка статей за день'
+receivers="59 342"
+  />
+  <TheCard
+  :strong=false
+  image="s1.png"
+  :frame=true
+rotate="-rotate-[15deg]"
+header="Перед рассветом"
+title="Утренний бухгалтер"
+description="Самые важные новости и события за день. Кратко, по делу, структурировано."
+checkone="Новости для бухгалтеров, ИП и директора"
+checktwo='Подборка статей за день'
+receivers="59 342"
+  />
+  <TheCard
+  :strong=false
+  image="s1.png"
+  :frame=true
+rotate="-rotate-[15deg]"
+header="Перед рассветом"
+title="Утренний бухгалтер"
+description="Самые важные новости и события за день. Кратко, по делу, структурировано."
+checkone="Новости для бухгалтеров, ИП и директора"
+checktwo='Подборка статей за день'
+receivers="59 342"
+  />
+  <TheCard
+  :strong=false
+  image="free.png"
+  :frame=false
+rotate="-rotate-[15deg]"
+header="Перед рассветом"
+title="Утренний бухгалтер"
+description="Самые важные новости и события за день. Кратко, по делу, структурировано."
+checkone="Новости для бухгалтеров, ИП и директора"
+checktwo='Подборка статей за день'
+receivers="59 342"
+  />
+
 </div>
 
 </section>
