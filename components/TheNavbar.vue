@@ -9,7 +9,7 @@
 const navigation=ref([
     {id:1,link:"/html",label:"Рассылки"},
     {id:2,link:'/html/social',label:"Соцсети"},
-    {id:3,link:"",label:"Мессенджеры"}
+    {id:3,link:"/html/message",label:"Мессенджеры"}
 ])
 </script>
 
